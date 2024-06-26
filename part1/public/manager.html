@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback Manager</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div id="logo">
+            <a href="/"><img id="logo-image" src="../images/logo.png" alt="logo"></a>
+        </div>
+        <div class="right-div">
+            <a href="/contact-us"><button class="contactus-button">Contact us</button></a>
+            <a v-show="!loggedIn" class="login-button" href="/login">Login</a>
+            <a v-show="loggedIn" id="account" href="/account"></a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li><a href="/show-feedback">Show Feedback</a></li>
+            <li><a href="/manager">Manager</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="FeedbackContainer">
+        <div class="FeedbackManager">
+            <div class="Feedback-Heading">
+                <h2>Feedback for trips you manage</h2>
+            </div>
+            <div class="showing_feedback">
+                <!-- Feedback will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="/home" class="about-link" target="_blank">Home</a>
+    </footer>
+
+    <script src="javascripts/showFeedbackManager.js"></script>
+</body>
+
+</html>
